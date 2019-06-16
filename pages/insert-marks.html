@@ -286,7 +286,17 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Display Marks</h1>
+          <h1 class="h3 mb-2 text-gray-800">Insert Marks</h1>
+          <div class="d-none d-md-block mt-2 mb-4">
+            <input type="button" class="btn btn-primary" value="Save Marks">
+            <input type="button" class="btn btn-primary" value="Send Marks">
+          </div>
+
+          <div class="d-md-none mt-2 mb-2">
+            <input type="button" class="btn btn-warning" value="Save Marks">
+            <input type="button" class="btn btn-warning" value="Send Marks">
+          </div>
+
           <!-- DataTales Example -->
           <div class="card shadow mb-5">
             <div class="card-header py-3">
@@ -339,9 +349,9 @@
                         <thead>
                           <tr>
                             <th>S.No</th>
-                            <th>Roll No</th>
+                            <th>Roll.No</th>
                             <th>Name</th>
-                            <th>Assignment-10/20</th>
+                            <th>Assignment</th>
                             <th>Lab</th>
                             <th>Mid-Term</th>
                             <th>Final</th>
@@ -351,136 +361,27 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>1</td>
-                            <td>106</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
                             <td>2</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>B</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>121</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>110</td>
-                            <td>Muhammad Ghulaam Sarwar</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>C</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>240</td>
-                            <td>Muhammad Shaheer Mustufa Ansari</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>8</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>9</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>10</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>11</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>12</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td>
+                              <input id="assignment" type="text" class="form-control" onchange="validateMarks(event);"
+                                onkeypress="numberOnly(event);" onclick="check();" maxlength="4" />
+                            </td>
+                            <td>
+                              <input id="lab" type="text" class="form-control" onchange="validateMarks(event);"
+                                onkeypress="numberOnly(event);" onclick="check();" maxlength="4" />
+                            </td>
+                            <td>
+                              <input id="mid" type="text" class="form-control" onchange="validateMarks(event);"
+                                onkeypress="numberOnly(event);" onclick="check();" maxlength="4" />
+                            </td>
+                            <td>
+                              <input id="final" type="text" class="form-control" onchange="validateMarks(event);"
+                                onkeypress="numberOnly(event);" onclick="check();" maxlength="4" />
+                            </td>
+                            <td id="total">0</td>
+                            <td id="grade"></td>
                           </tr>
                         </tbody>
                       </table>
@@ -547,6 +448,100 @@
 
   <!-- Page level custom scripts -->
   <script src="../source/js/demo/datatables-demo.js"></script>
+  <script>
+    function marksAddition() {
+      var m1, m2, m3, m4, t;
+      m1 = document.getElementById("assignment").value;
+      m2 = document.getElementById("lab").value;
+      m3 = document.getElementById("mid").value;
+      m4 = document.getElementById("final").value;
+      if (m1 != "" && m2 != "" && m3 != "" && m4 != "") {
+        m1 = parseFloat(m1);
+        m2 = parseFloat(m2);
+        m3 = parseFloat(m3);
+        m4 = parseFloat(m4);
+        t = m1 + m2 + m3 + m4;
+        if (!isNaN(t)) {
+          document.getElementById("total").innerHTML = t;
+          if (t >= 80) {
+            document.getElementById("grade").innerHTML = "A+";
+          } else if (t >= 70) {
+            document.getElementById("grade").innerHTML = "A";
+          } else if (t >= 60) {
+            document.getElementById("grade").innerHTML = "B";
+          } else if (t >= 50) {
+            document.getElementById("grade").innerHTML = "C";
+          } else if (t > 49) {
+            document.getElementById("grade").innerHTML = "D";
+          } else if (t <= 49) {
+            document.getElementById("grade").innerHTML = "F";
+          }
+        } else {
+          document.getElementById("total").innerHTML = "0";
+          document.getElementById("grade").innerHTML = "";
+        }
+      }
+    }
+
+    function numberOnly(evt) {
+      var Event = evt || window.event;
+      // Handle paste
+      if (Event.type === 'paste') {
+        key = event.clipboardData.getData('text/plain');
+      } else {
+        // Handle key press
+        var key = Event.keyCode || Event.which;
+        key = String.fromCharCode(key);
+      }
+      var regex = /^\d+|\./;
+      if (!regex.test(key)) {
+        Event.returnValue = false;
+      }
+    }
+
+    function validateMarks(evt) {
+      var Event = evt || window.event;
+      var m1 = document.getElementById("assignment");
+      var m2 = document.getElementById("lab");
+      var m3 = document.getElementById("mid");
+      var m4 = document.getElementById("final");
+      var regex = /^\d+(\.\d+)*$/;
+      if (Event.target.id == "assignment") {
+        if (!regex.test(m1.value)) {
+          m1.value = "Invalid Input";
+        } else if (m1.value > 10) {
+          m1.value = "Limit Exceeded";
+        }
+      } else if (Event.target.id == "lab") {
+        if (!regex.test(m2.value)) {
+          m2.value = "Invalid Input"
+        } else if (m2.value > 20) {
+          m2.value = "Limit Exceeded";
+        }
+      } else if (Event.target.id == "mid") {
+        if (!regex.test(m3.value)) {
+          m3.value = "Invalid Input"
+        } else if (m3.value > 20) {
+          m3.value = "Limit Exceeded";
+        }
+      } else if (Event.target.id == "final") {
+        if (!regex.test(m4.value)) {
+          m4.value = "Invalid Input"
+        } else if (m4.value > 50) {
+          m4.value = "Limit Exceeded";
+        }
+      }
+      marksAddition();
+    }
+
+    function check(evt) {
+      var Event = evt || window.event;
+      if (Event.target.value == "Invalid Input" || Event.target.value == "Limit Exceeded") {
+        console.log("check");
+        Event.target.value = "";
+      }
+    }
+  </script>
 </body>
 
 </html>
