@@ -345,11 +345,11 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Display Marks</h1>
+          <h1 class="h3 mb-2 text-gray-800">Insert Attendance</h1>
           <!-- DataTales Example -->
           <div class="card shadow mb-5">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Marks Sheet</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Attendance Sheet</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -382,12 +382,24 @@
                         </select>
                       </label>
                       <label for="semester">Semester:
-                        <input type="text" name="semester" id="semester" class="form-control form-control-sm"
-                          value="6 Semester" size="9" readonly>
+                        <select name="semester" id="semester"
+                          class="custom-select custom-select-sm form-control form-control-sm">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
                       </label>
-                      <label for="batch">Batch:
-                        <input type="text" name="batch" id="batch" class="form-control form-control-sm" value="2016"
-                          size="3" readonly>
+                      <label for="date">Date:
+                        <select name="date" id="date"
+                          class="custom-select custom-select-sm form-control form-control-sm">
+                          <option value="1">1-Jan-2019</option>
+                          <option value="2">2-Jan-2019</option>
+                          <option value="3">3-Jan-2019</option>
+                          <option value="4">4-Jan-2019</option>
+                          <option value="5">5-Jan-2019</option>
+                        </select>
                       </label>
                     </div>
                   </div>
@@ -400,146 +412,119 @@
                             <th>S.No</th>
                             <th>Roll No</th>
                             <th>Name</th>
-                            <th>Assignment-10/20</th>
-                            <th>Lab</th>
-                            <th>Mid-Term</th>
-                            <th>Final</th>
-                            <th>Total</th>
-                            <th>Grade</th>
+                            <th>Attendance</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>1</td>
-                            <td>106</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>A+</td>
+                            <td> <select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
                           </tr>
                           <tr>
-                            <td>3</td>
+                            <td>1</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>B</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
                           </tr>
                           <tr>
-                            <td>4</td>
-                            <td>121</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>110</td>
-                            <td>Muhammad Ghulaam Sarwar</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>C</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>240</td>
-                            <td>Muhammad Shaheer Mustufa Ansari</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
+                            <td>1</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
                           </tr>
                           <tr>
-                            <td>8</td>
+                            <td>1</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
                           </tr>
                           <tr>
-                            <td>9</td>
+                            <td>1</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
                           </tr>
                           <tr>
-                            <td>10</td>
+                            <td>1</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
                           </tr>
                           <tr>
-                            <td>11</td>
+                            <td>1</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
                           </tr>
                           <tr>
-                            <td>12</td>
+                            <td>1</td>
                             <td>110</td>
                             <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>110</td>
+                            <td>Omer Abdul Samad</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>110</td>
+                            <td>Omer Abdul Samad</td>
+                            <td><select name="attendance" id="attendance"
+                                class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="null"></option>
+                                <option value="p">Present</option>
+                                <option value="a">Absent</option>
+                              </select></td>
                           </tr>
                         </tbody>
                       </table>

@@ -8,7 +8,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Campus Management System - Marks</title>
+  <title>Campus Management System</title>
 
   <!-- Font awesome fonts-->
   <link href="../source/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
@@ -21,51 +21,24 @@
   <link href="../source/css/style.css" rel="stylesheet" />
 
   <style>
-    tr {
-      color: #000;
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
     }
 
-    div.table-responsive>div.tableWrapper>div.row {
-      margin: 0;
+    .left {
+      left: 0;
+      background-color: #111;
     }
 
-    div.tableWrapper label {
-      white-space: nowrap;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .upper-part input,
-    .upper-part select {
-      width: auto;
-      display: inline-block;
-    }
-
-    .upper-part label:not(:first-child) {
-      margin-left: 1rem;
-    }
-
-    @media (min-width: 1436px) {
-      .upper-part {
-        display: flex;
-      }
-    }
-
-    @media (max-width: 1435px) {
-
-      .upper-part input,
-      .upper-part select {
-        margin-left: 2px;
-      }
-
-      .upper-part label:not(:first-child) {
-        margin-left: 0rem;
-      }
-
-      .upper-part label {
-        margin-bottom: 0.5rem;
-        display: block;
-      }
+    .right {
+      right: 0;
+      background-color: red;
     }
   </style>
 </head>
@@ -80,9 +53,7 @@
         <div class="sidebar-brand-icon d-md-none">
           CMS
         </div>
-        <div class="sidebar-brand-text mx-3">
-          campus Management System
-        </div>
+        <div class="sidebar-brand-text mx-3">campus Management system</div>
       </a>
 
       <!-- Divider -->
@@ -143,7 +114,6 @@
           </div>
         </div>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" href="time-table.html">
           <i class="fas fa-fw fa-table"></i>
@@ -174,14 +144,12 @@
         </div>
       </li>
 
-      <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="fas fa-fw fa-folder"></i>
           <span>main-item-1</span></a>
       </li>
 
-      <!-- Nav Item - Tables -->
       <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="fas fa-fw fa-folder"></i>
@@ -329,6 +297,7 @@
                 </a>
                 <a class="dropdown-item text-center small text-gray-900" href="#">View All Messages</a>
               </div>
+
             </li>
 
             <li class="nav-item m-1">
@@ -344,213 +313,42 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Display Marks</h1>
-          <!-- DataTales Example -->
-          <div class="card shadow mb-5">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Marks Sheet</h6>
+          <!-- Content Row -->
+
+          <div class="row">
+            <div class="col">
+              <div class="list-group">
+
+                <a class="list-group-item list-group-item d-flex" style="text-decoration: none;" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle">
+                      <i class="fas fa-user"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-weight-bold">Omer Abdul Samad</div>
+                    <div>Your leave application has been...</div>
+                  </div>
+                </a>
+
+              </div>
             </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <div class="tableWrapper">
-                  <div class="row">
-                    <!-- Table upper part -->
-                    <div class="col upper-part">
-                      <label for="descipline">Descipline:
-                        <select name="descipline" id="descipline"
-                          class="custom-select custom-select-sm form-control form-control-sm">
-                          <option value="cs">Computer Science</option>
-                          <option value="it">information Technology</option>
-                          <option value="bi">Bio Informatics</option>
-                        </select>
-                      </label>
-                      <label for="course">Course:
-                        <select name="course" id="course"
-                          class="custom-select custom-select-sm form-control form-control-sm">
-                          <option value="cs-323">Computer Graphics Animation & Multimedia</option>
-                        </select>
-                      </label>
-                      <label for="section">Section:
-                        <select name="section" id="section"
-                          class="custom-select custom-select-sm form-control form-control-sm">
-                          <option value="a">A</option>
-                          <option value="b">B</option>
-                          <option value="c">C</option>
-                          <option value="d">D</option>
-                          <option value="e">E</option>
-                        </select>
-                      </label>
-                      <label for="semester">Semester:
-                        <input type="text" name="semester" id="semester" class="form-control form-control-sm"
-                          value="6 Semester" size="9" readonly>
-                      </label>
-                      <label for="batch">Batch:
-                        <input type="text" name="batch" id="batch" class="form-control form-control-sm" value="2016"
-                          size="3" readonly>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <table class="table table-bordered" width="100%" cellspacing="0" role="grid"
-                        aria-describedby="dataTable_info" style="width: 100%;">
-                        <thead>
-                          <tr>
-                            <th>S.No</th>
-                            <th>Roll No</th>
-                            <th>Name</th>
-                            <th>Assignment-10/20</th>
-                            <th>Lab</th>
-                            <th>Mid-Term</th>
-                            <th>Final</th>
-                            <th>Total</th>
-                            <th>Grade</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>106</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>B</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>121</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>110</td>
-                            <td>Muhammad Ghulaam Sarwar</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>C</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>240</td>
-                            <td>Muhammad Shaheer Mustufa Ansari</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>7</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>8</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>9</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>10</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>11</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>12</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi rem inventore, expedita
+                    consectetur
+                    impedit odio, natus veniam enim dolore accusantium distinctio velit! Animi quis, possimus expedita
+                    commodi, at ea similique nostrum soluta, cum ratione itaque suscipit officia sequi adipisci nemo?
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Collapsable Card Example -->
+          <!-- /.container-fluid -->
         </div>
-        <!-- /.container-fluid -->
       </div>
       <!-- End of Main Content -->
 
@@ -600,12 +398,6 @@
 
   <!-- Custom scripts for all pages-->
   <script src="../source/js/page.js"></script>
-  <!-- Page level plugins -->
-  <script src="../source/datatables/jquery.dataTables.min.js"></script>
-  <script src="../source/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="../source/js/demo/datatables-demo.js"></script>
 </body>
 
 </html>

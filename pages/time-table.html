@@ -290,7 +290,6 @@
                   Notifications</a>
               </div>
             </li>
-
             <li class="nav-item dropdown no-arrow m-1">
               <a class="nav-link no-arrow dropdown-toggle text-gray-900" href="#" id="alertsDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -381,13 +380,13 @@
                           <option value="e">E</option>
                         </select>
                       </label>
-                      <label for="semester">Semester:
-                        <input type="text" name="semester" id="semester" class="form-control form-control-sm"
-                          value="6 Semester" size="9" readonly>
-                      </label>
-                      <label for="batch">Batch:
-                        <input type="text" name="batch" id="batch" class="form-control form-control-sm" value="2016"
-                          size="3" readonly>
+                      <label for="semester">Section:
+                        <select name="semester" id="semester"
+                          class="custom-select custom-select-sm form-control form-control-sm">
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
                       </label>
                     </div>
                   </div>
@@ -395,151 +394,260 @@
                     <div class="col-sm-12">
                       <table class="table table-bordered" width="100%" cellspacing="0" role="grid"
                         aria-describedby="dataTable_info" style="width: 100%;">
-                        <thead>
-                          <tr>
-                            <th>S.No</th>
-                            <th>Roll No</th>
-                            <th>Name</th>
-                            <th>Assignment-10/20</th>
-                            <th>Lab</th>
-                            <th>Mid-Term</th>
-                            <th>Final</th>
-                            <th>Total</th>
-                            <th>Grade</th>
-                          </tr>
-                        </thead>
                         <tbody>
                           <tr>
-                            <td>1</td>
-                            <td>106</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td>Friday</td>
+                            <td>8:30-9:15</td>
+                            <td>9:15-10:00</td>
+                            <td>10:00-10-45</td>
+                            <td>10:45-11:30</td>
+                            <td>11:30-12:15</td>
+                            <td>12:15-1:00</td>
+                            <td>2:30-3:15</td>
+                            <td>3:15-4:00</td>
+                            <td>2:30-3:15</td>
+                            <td>3:15-4:00</td>
                           </tr>
                           <tr>
-                            <td>2</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>A+</td>
+                            <td>Timing</td>
+                            <td>8:30-9:15</td>
+                            <td>9:15-10:00</td>
+                            <td>10:00-10-45</td>
+                            <td>10:45-11:30</td>
+                            <td>11:30-12:15</td>
+                            <td>12:15-1:00</td>
+                            <td>2:30-3:15</td>
+                            <td>3:15-4:00</td>
+                            <td>2:30-3:15</td>
+                            <td>3:15-4:00</td>
                           </tr>
                           <tr>
-                            <td>3</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>B</td>
+                            <td><strong>Day<sup style="font-size: 15px;"> Period</sup></strong></td>
+                            <td><strong>1</strong></td>
+                            <td><strong>2</strong></td>
+                            <td><strong>3</strong></td>
+                            <td><strong>4</strong></td>
+                            <td><strong>5</strong></td>
+                            <td><strong>6</strong></td>
+                            <td><strong>7</strong></td>
+                            <td><strong>8</strong></td>
+                            <td><strong>9</strong></td>
+                            <td><strong>10</strong></td>
                           </tr>
                           <tr>
-                            <td>4</td>
-                            <td>121</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>92</td>
-                            <td>A+</td>
+                            <td><strong>Mon</strong></td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
                           </tr>
                           <tr>
-                            <td>5</td>
-                            <td>110</td>
-                            <td>Muhammad Ghulaam Sarwar</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>C</td>
+                            <td><strong>Tue</strong></td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
                           </tr>
                           <tr>
-                            <td>6</td>
-                            <td>240</td>
-                            <td>Muhammad Shaheer Mustufa Ansari</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><strong>Wed</strong></td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-05</div>
+                              <div>BasEleTh</div>
+                            </td>
                           </tr>
                           <tr>
-                            <td>7</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><strong>Thu</strong></td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-12</div>
+                              <div>CPPSTh</div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
                           </tr>
                           <tr>
-                            <td>8</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>9</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>10</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>11</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
-                          </tr>
-                          <tr>
-                            <td>12</td>
-                            <td>110</td>
-                            <td>Omer Abdul Samad</td>
-                            <td>10</td>
-                            <td>20</td>
-                            <td>18</td>
-                            <td>45</td>
-                            <td>82</td>
-                            <td>A+</td>
+                            <td><strong>Fri</strong></td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div>Hs-15</div>
+                              <div>Automata</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div>Hs-13</div>
+                              <div>BasEleTh</div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
+                            <td>
+                              <div></div>
+                              <div></div>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
