@@ -57,21 +57,10 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
+          <!-- Content Row -->
           <div class="row justify-content-center">
             <!-- Area Chart -->
             <div class="col-sm-9 col-md-6 col-lg-8 col-xl-4">
-              <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#home">Faculty</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#menu1">Staff</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#menu2">Student</a>
-                </li>
-              </ul>
-
               <div class="card o-hidden border-0 shadow-lg shadow mb-4">
                 <!-- Card Body -->
                 <div class="card-body p-0">
@@ -80,23 +69,9 @@
                       <h1 class="h5 text-gray-900">
                         Login
                       </h1>
-                      <div class="tab-content">
-                        <div id="home" class="tab-pane active">
-                          <h1 class="h5 text-gray-900 mb-3">
-                            Faculty members
-                          </h1>
-                        </div>
-                        <div id="menu1" class="container tab-pane fade">
-                          <h1 class="h5 text-gray-900 mb-3">
-                            Staff members
-                          </h1>
-                        </div>
-                        <div id="menu2" class="container tab-pane fade">
-                          <h1 class="h5 text-gray-900 mb-3">
-                            Student
-                          </h1>
-                        </div>
-                      </div>
+                      <h1 class="h5 text-gray-900 mb-3">
+                        Staff and Faculty members
+                      </h1>
                       <p>You must enter your Username and</p>
                       <p>Password as registered in the</p>
                       <p>academic system</p>
@@ -175,13 +150,6 @@
 
   <!-- Custom scripts for all pages-->
   <script src="../source/js/page.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(".nav-tabs a").click(function () {
-        $(this).tab("show");
-      });
-    });
-  </script>
 </body>
 
 </html>

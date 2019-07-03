@@ -1,467 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <title>Campus Management System - Marks</title>
 
-  <title>Campus Management System - Marks</title>
+    <!-- Font awesome fonts-->
+    <link
+      href="../source/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Font family style Nunito link for every language-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
 
-  <!-- Font awesome fonts-->
-  <link href="../source/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
-  <!-- Font family style Nunito link for every language-->
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet" />
+    <!-- Custom styles for this template-->
+    <link href="../source/css/style.css" rel="stylesheet" />
 
-  <!-- Custom styles for this template-->
-  <link href="../source/css/style.css" rel="stylesheet" />
-
-  <style>
-    tr {
-      color: #000;
-    }
-
-    div.table-responsive>div.tableWrapper>div.row {
-      margin: 0;
-    }
-
-    div.tableWrapper label {
-      white-space: nowrap;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .upper-part input,
-    .upper-part select {
-      width: auto;
-      display: inline-block;
-    }
-
-    .upper-part label:not(:first-child) {
-      margin-left: 1rem;
-    }
-
-    @media (min-width: 1436px) {
-      .upper-part {
-        display: flex;
+    <style>
+      tr {
+        color: #000;
       }
-    }
 
-    @media (max-width: 1435px) {
+      div.table-responsive > div.tableWrapper > div.row {
+        margin: 0;
+      }
+
+      div.tableWrapper label {
+        white-space: nowrap;
+        color: #000;
+        font-weight: bold;
+      }
 
       .upper-part input,
       .upper-part select {
-        margin-left: 2px;
+        width: auto;
+        display: inline-block;
       }
 
       .upper-part label:not(:first-child) {
-        margin-left: 0rem;
+        margin-left: 1rem;
       }
 
-      .upper-part label {
-        margin-bottom: 0.5rem;
-        display: block;
+      @media (min-width: 1436px) {
+        .upper-part {
+          display: flex;
+        }
       }
-    }
-  </style>
-</head>
 
-<body id="page-top">
-  <!-- Page Wrapper -->
-  <div id="wrapper">
-    <!-- Sidebar -->
-    <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color:#333;" id="accordionSidebar">
-      <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.html">
-        <div class="sidebar-brand-icon d-md-none">
-          CMS
-        </div>
-        <div class="sidebar-brand-text mx-3">
-          campus Management System
-        </div>
-      </a>
+      @media (max-width: 1435px) {
+        .upper-part input,
+        .upper-part select {
+          margin-left: 2px;
+        }
 
-      <!-- Divider -->
-      <hr class="sidebar-divider" />
+        .upper-part label:not(:first-child) {
+          margin-left: 0rem;
+        }
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Personal
-      </div>
+        .upper-part label {
+          margin-bottom: 0.5rem;
+          display: block;
+        }
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProfile"
-          aria-expanded="true" aria-controls="collapseProfile">
-          <i class="fas fa-fw fa-user"></i>
-          <span>Profile</span>
-        </a>
-        <div id="collapseProfile" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="../index.html">View Profile</a>
-            <a class="collapse-item" href="#">Edit Profile</a>
-          </div>
-        </div>
-      </li>
+        body {
+          --header-margin: 76.5px;
+        }
 
-      <!-- Divider -->
-      <hr class="sidebar-divider" />
+        #content {
+          min-height: calc(100vh - var(--header-margin));
+        }
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Academic
-      </div>
+        .card {
+          border-radius: 10px;
+        }
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMarks" aria-expanded="true"
-          aria-controls="collapseMarks">
-          <i class="fas fa-fw fa-book"></i>
-          <span>Student Marks</span>
-        </a>
-        <div id="collapseMarks" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="marks.html">View Marks</a>
-            <a class="collapse-item" href="insert-marks.html">Insert Marks</a>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAtten" aria-expanded="true"
-          aria-controls="collapseAtten">
-          <i class="fas fa-fw fa-book-open"></i>
-          <span>Attendance</span>
-        </a>
-        <div id="collapseAtten" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="view-atten.html">View Attendance</a>
-            <a class="collapse-item" href="insert-atten.html">Insert Attendance</a>
-          </div>
-        </div>
-      </li>
+        p {
+          margin-bottom: 0;
+          color: #000;
+        }
+      }
+    </style>
+  </head>
 
-      <li class="nav-item">
-        <a class="nav-link" href="time-table.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Time Table</span></a>
-      </li>
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-2"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider" />
+            <!-- Topbar Heading -->
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Administrative
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-          aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>dropdown-item</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#">sub-item-1</a>
-            <a class="collapse-item" href="#">sub-item-2</a>
-            <a class="collapse-item" href="#">sub-item-3</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>main-item-1</span></a>
-      </li>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>main-item-2</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider" />
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Self Service
-      </div>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>main-item-1</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block" />
-    </ul>
-    <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-      <!-- Main Content -->
-      <div id="content">
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-2">
-            <i class="fa fa-bars"></i>
-          </button>
-
-          <!-- Topbar Heading -->
-
-          <div class="d-none d-sm-inline-block mt-2">
-            <h1 class="h3 text-gray-800">Sir Syed University</h1>
-          </div>
-
-          <!-- Topbar Navbar -->
-          <ul class="navbar-nav ml-auto">
-            <!-- Nav Item - Alerts -->
-            <li class="nav-item dropdown no-arrow m-1">
-              <a class="nav-link no-arrow dropdown-toggle text-gray-900" href="#" id="alertsDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="d-none d-md-inline-block mr-1">Notification</span>
-                <i class="fa fa-fw fa-bell"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">4</span>
-              </a>
-              <!-- Dropdown - Alerts -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header">
-                  Notification Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle" style="background-color:#333;">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <span class="font-weight-bold">Your profile information has be...</span>
-                    <div class="small text-gray-500">January 12, 2019</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle" style="background-color:#333;">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <span class="font-weight-bold">Marks of Software Project Mana...</span>
-                    <div class="small text-gray-500">February 21, 2019</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle" style="background-color:#333;">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <span class="font-weight-bold">Your leave application has been...</span>
-                    <div class="small text-gray-500">February 21, 2019</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle" style="background-color:#333;">
-                      <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <span class="font-weight-bold">Your leave application has been...</span>
-                    <div class="small text-gray-500">February 22, 2019</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-900" href="notifications.html">View All
-                  Notifications</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown no-arrow m-1">
-              <a class="nav-link no-arrow dropdown-toggle text-gray-900" href="#" id="alertsDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="d-none d-md-inline-block mr-1">Messages</span>
-                <i class="fa fa-fw fa-envelope"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">2</span>
-              </a>
-              <!-- Dropdown - Alerts -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header">
-                  Message Center
-                </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle">
-                      <i class="fas fa-user"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <span class="font-weight-bold">Your profile information has be...</span>
-                    <div class="small text-gray-500">January 12, 2019</div>
-                  </div>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle">
-                      <i class="fas fa-user"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <span class="font-weight-bold">Your leave application has been...</span>
-                    <div class="small text-gray-500">February 21, 2019</div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-900" href="#">View All Messages</a>
-              </div>
-            </li>
-
-            <li class="nav-item m-1">
-              <a class="nav-link text-gray-900" href="#" id="signoutUser" role="button" aria-haspopup="true"
-                aria-expanded="false" data-toggle="modal" data-target="#signoutModal">
-                <span class="d-none d-md-inline-block mr-1">Signout</span>
-                <i class="fa fa-fw fa-sign-out-alt"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-          <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Display Marks</h1>
-          <!-- DataTales Example -->
-          <div class="card shadow mb-5">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Marks Sheet</h6>
+            <div class="d-none d-sm-inline-block mt-2">
+              <h1 class="h3 text-gray-800">Sir Syed University</h1>
             </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <div class="tableWrapper">
-                  <div class="row">
-                    <!-- Table upper part -->
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <table class="table table-borderless" width="100%" cellspacing="0" role="grid"
-                        aria-describedby="dataTable_info" style="width: 100%;">
-                        <tbody>
-                          <tr>
-                            <td class="col">
-                              <div class="list-group">
+          </nav>
+          <!-- End of Topbar -->
 
-                                <a class="list-group-item list-group-item d-flex" style="text-decoration: none;"
-                                  href="#">
-                                  <div class="mr-3">
-                                    <div class="icon-circle">
-                                      <i class="fas fa-user"></i>
-                                    </div>
-                                  </div>
-                                  <div>
-                                    <div class="font-weight-bold">Omer Abdul Samad</div>
-                                    <div>Your leave application has been...</div>
-                                  </div>
-                                </a>
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+              <!-- Area Chart -->
+              <div class="col-sm-9 col-md-6 col-lg-8 col-xl-4">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#home">Faculty</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#menu1">Staff</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#menu2">Student</a>
+                  </li>
+                </ul>
 
-                              </div>
-                            </td>
-                            <td class="col-5">
-                              <div class="card">
-                                <div class="card-body">
-                                  <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi rem inventore,
-                                    expedita
-                                    consectetur
-                                    impedit odio, natus veniam enim dolore accusantium distinctio velit! Animi quis,
-                                    possimus expedita
-                                    commodi, at ea similique nostrum soluta, cum ratione itaque suscipit officia sequi
-                                    adipisci nemo?
-                                  </p>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                <div class="card o-hidden border-0 shadow-lg shadow mb-4">
+                  <!-- Card Body -->
+                  <div class="card-body p-0">
+                    <div class="p-3">
+                      <div class="flex text-center mb-4">
+                        <h1 class="h5 text-gray-900">
+                          Login
+                        </h1>
+                        <div class="tab-content">
+                          <div id="home" class="tab-pane active">
+                            <h1 class="h5 text-gray-900 mb-3">
+                              Faculty members
+                            </h1>
+                          </div>
+                          <div id="menu1" class="container tab-pane fade">
+                            <h1 class="h5 text-gray-900 mb-3">
+                              Staff members
+                            </h1>
+                          </div>
+                          <div id="menu2" class="container tab-pane fade">
+                            <h1 class="h5 text-gray-900 mb-3">
+                              Student
+                            </h1>
+                          </div>
+                        </div>
+                        <p>You must enter your Username and</p>
+                        <p>Password as registered in the</p>
+                        <p>academic system</p>
+                      </div>
+                      <form class="user">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control form-control-user"
+                            id="exampleInputUserName"
+                            placeholder="Enter Username"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <input
+                            type="password"
+                            class="form-control form-control-user"
+                            id="exampleInputPassword"
+                            placeholder="Enter Password"
+                          />
+                        </div>
+                        <a
+                          href="../index.html"
+                          class="btn btn-primary btn-user btn-block mt-4"
+                          >Sign In
+                        </a>
+                        <a
+                          href="register.html"
+                          class="btn btn-danger btn-user btn-block mt-4"
+                          >Register
+                        </a>
+                      </form>
+                      <hr />
+                      <div class="text-center">
+                        <a class="small" href="forgot-password.html"
+                          >Forgot Password?</a
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- /.container-fluid -->
         </div>
-        <!-- /.container-fluid -->
-      </div>
-      <!-- End of Main Content -->
+        <!-- End of Main Content -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white shadow">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto
-            text-gray-900">
-            <span>Sir Syed University, All Right Reserved &copy; 2019</span>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white shadow">
+          <div class="container my-auto">
+            <div
+              class="copyright text-center my-auto
+            text-gray-900"
+            >
+              <span>Sir Syed University, All Right Reserved &copy; 2019</span>
+            </div>
           </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
-    </div>
-    <!-- End of Content Wrapper -->
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Signout Modal-->
-  <div class="modal fade" id="signoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Select "Logout" below if you are ready to end your current session.
-        </div>
-
-        <div class="modal-footer mx-5">
-          <a class="btn btn-primary" role="button" href="signin.html">Sign Out</a>
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">
-            Cancel
-          </button>
-        </div>
+        </footer>
+        <!-- End of Footer -->
       </div>
+      <!-- End of Content Wrapper -->
     </div>
-  </div>
+    <!-- End of Page Wrapper -->
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="../source/jquery/jquery.min.js"></script>
-  <script src="../source/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Signout Modal-->
 
-  <!-- Custom scripts for all pages-->
-  <script src="../source/js/page.js"></script>
-  <!-- Page level plugins -->
-  <script src="../source/datatables/jquery.dataTables.min.js"></script>
-  <script src="../source/datatables/dataTables.bootstrap4.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../source/jquery/jquery.min.js"></script>
+    <script src="../source/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="../source/js/demo/datatables-demo.js"></script>
-</body>
+    <!-- Custom scripts for all pages-->
+    <script src="../source/js/page.js"></script>
+    <!-- Page level plugins -->
+    <script src="../source/datatables/jquery.dataTables.min.js"></script>
+    <script src="../source/datatables/dataTables.bootstrap4.min.js"></script>
 
+    <!-- Page level custom scripts -->
+    <script src="../source/js/demo/datatables-demo.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".nav-tabs a").click(function() {
+          $(this).tab("show");
+        });
+      });
+    </script>
+  </body>
 </html>
