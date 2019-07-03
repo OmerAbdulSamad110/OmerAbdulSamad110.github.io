@@ -568,26 +568,34 @@
       if (Event.target.id == "assignment") {
         if (!regex.test(m1.value)) {
           m1.value = "Invalid Input";
+          m1.style.border = "1px solid red";
         } else if (m1.value > 10) {
           m1.value = "Limit Exceeded";
+          m1.style.border = "1px solid red";
         }
       } else if (Event.target.id == "lab") {
         if (!regex.test(m2.value)) {
-          m2.value = "Invalid Input"
+          m2.value = "Invalid Input";
+          m2.style.border = "1px solid red";
         } else if (m2.value > 20) {
           m2.value = "Limit Exceeded";
+          m2.style.border = "1px solid red";
         }
       } else if (Event.target.id == "mid") {
         if (!regex.test(m3.value)) {
-          m3.value = "Invalid Input"
+          m3.value = "Invalid Input";
+          m3.style.border = "1px solid red";
         } else if (m3.value > 20) {
           m3.value = "Limit Exceeded";
+          m3.style.border = "1px solid red";
         }
       } else if (Event.target.id == "final") {
         if (!regex.test(m4.value)) {
-          m4.value = "Invalid Input"
+          m4.value = "Invalid Input";
+          m4.style.border = "1px solid red";
         } else if (m4.value > 50) {
           m4.value = "Limit Exceeded";
+          m4.style.border = "1px solid red";
         }
       }
       marksAddition();
@@ -598,6 +606,7 @@
       if (Event.target.value == "Invalid Input" || Event.target.value == "Limit Exceeded") {
         console.log("check");
         Event.target.value = "";
+        Event.target.style.border = "none";
       }
     }
   </script>
