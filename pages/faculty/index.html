@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Campus Management System</title>
+
+  <!-- Font awesome fonts-->
+  <link href="../../source/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+  <!-- Font family style Nunito link for every language-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+
+  <!-- Custom styles for this template-->
+  <link href="../../source/css/style.css" rel="stylesheet" />
+
+  <style>
+
+  </style>
+</head>
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color:#333;" id="accordionSidebar">
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon d-md-none">
+          CMS
+        </div>
+        <div class="sidebar-brand-text mx-3">campus Management system</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Personal
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProfile"
+          aria-expanded="true" aria-controls="collapseProfile">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Profile</span>
+        </a>
+        <div id="collapseProfile" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="index.html">View Profile</a>
+            <a class="collapse-item" href="./edit.html">Edit Profile</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Administrative
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecord" aria-expanded="true"
+          aria-controls="collapseRecord">
+          <i class="fas fa-fw fa-database"></i>
+          <span>Records</span>
+        </a>
+        <div id="collapseRecord" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="./view-marks.html">Student</a>
+            <a class="collapse-item" href="./marksheet.html">Teacher</a>
+            <a class="collapse-item" href="./marksheet.html">Faculty</a>
+            <a class="collapse-item" href="./marksheet.html">Department</a>
+            <a class="collapse-item" href="./marksheet.html">Course</a>
+            <a class="collapse-item" href="./marksheet.html">Section</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRegis" aria-expanded="true"
+          aria-controls="collapseRegis">
+          <i class="fas fa-fw fa-user-plus"></i>
+          <span>Register</span>
+        </a>
+        <div id="collapseRegis" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="./view-marks.html">Student</a>
+            <a class="collapse-item" href="./marksheet.html">Teacher</a>
+            <a class="collapse-item" href="./marksheet.html">Faculty</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="./view-atten.html">
+          <i class="fas fa-fw fa-bullhorn"></i>
+          <span>Announcement</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCash" aria-expanded="true"
+          aria-controls="collapseCash">
+          <i class="fas fa-fw fa-money-bill-wave"></i>
+          <span>Cash</span>
+        </a>
+        <div id="collapseCash" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="./view-marks.html">Manage Fees</a>
+            <a class="collapse-item" href="./marksheet.html">Manage Salaries</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="./time-table.html">
+          <i class="fas fa-fw fa-envelope-open-text"></i>
+          <span>Requests</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Academic
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCM" aria-expanded="true"
+          aria-controls="collapseCM">
+          <i class="fas fa-fw fa-book-open"></i>
+          <span>Curriculum</span>
+        </a>
+        <div id="collapseCM" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="./view-marks.html">View Curriculum</a>
+            <a class="collapse-item" href="./marksheet.html">Manage Curriculum</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Time Table</span>
+        </a>
+        <div id="collapseTable" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="./view-marks.html">Student</a>
+            <a class="collapse-item" href="./marksheet.html">Teacher</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Self Service
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-envelope"></i>
+          <span>Make Request</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block" />
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-2">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Heading -->
+
+          <div class="d-none d-sm-inline-block mt-2">
+            <h1 class="h3 text-gray-800">Sir Syed University</h1>
+          </div>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow m-1">
+              <a class="nav-link no-arrow dropdown-toggle text-gray-900" href="#" id="alertsDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="d-none d-md-inline-block mr-1">Notification</span>
+                <i class="fa fa-fw fa-bell"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">4</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Notification Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle" style="background-color:#333;">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-weight-bold">Your profile information has be...</span>
+                    <div class="small text-gray-500">January 12, 2019</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle" style="background-color:#333;">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-weight-bold">Marks of Software Project Mana...</span>
+                    <div class="small text-gray-500">February 21, 2019</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle" style="background-color:#333;">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-weight-bold">Your leave application has been...</span>
+                    <div class="small text-gray-500">February 21, 2019</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle" style="background-color:#333;">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-weight-bold">Your leave application has been...</span>
+                    <div class="small text-gray-500">February 22, 2019</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-900" href="pages/notifications.html">View All
+                  Notifications</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown no-arrow m-1">
+              <a class="nav-link no-arrow dropdown-toggle text-gray-900" href="#" id="alertsDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="d-none d-md-inline-block mr-1">Messages</span>
+                <i class="fa fa-fw fa-envelope"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">2</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Message Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle">
+                      <i class="fas fa-user"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-weight-bold">Your profile information has be...</span>
+                    <div class="small text-gray-500">January 12, 2019</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle">
+                      <i class="fas fa-user"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-weight-bold">Your leave application has been...</span>
+                    <div class="small text-gray-500">February 21, 2019</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-900" href="#">View All Messages</a>
+              </div>
+            </li>
+
+            <li class="nav-item m-1">
+              <a class="nav-link text-gray-900" href="#" id="signoutUser" role="button" aria-haspopup="true"
+                aria-expanded="false" data-toggle="modal" data-target="#signoutModal">
+                <span class="d-none d-md-inline-block mr-1">Signout</span>
+                <i class="fa fa-fw fa-sign-out-alt"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid pt-4">
+
+
+          <div class="row mb-4">
+            <!-- Area Chart -->
+            <div class="col">
+              <div class="card">
+                <div class="card-header text-sm-left text-center">
+                  <i class="fas fa-bullhorn"></i>
+                  <span>Announcement</span>
+                </div>
+                <div class="card-body">
+                  <marquee behavior="" direction="">
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt!
+                    </p>
+                  </marquee>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 font-weight-bold text-gray-900 mb-1">
+                        Name:
+                      </div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-900 text-uppercase">
+                        Syed Mohammad Noman Hassany
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 font-weight-bold text-gray-900 mb-1">
+                        Faculty No:
+                      </div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-900 text-uppercase">
+                        CS-250
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 font-weight-bold text-gray-900 mb-1">
+                        Faculty:
+                      </div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-900 text-uppercase">
+                        Computer Science
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 font-weight-bold text-gray-900 mb-1">
+                        Department:
+                      </div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-900 text-uppercase">
+                        INFORMATION AND TECHNOLOGY
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col">
+              <div class="card shadow mb-4">
+                <!-- Card Body -->
+                <div class="card-body">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat sequi quia nesciunt ipsa voluptatibus architecto
+                    necessitatibus voluptate explicabo asperiores, dolorum
+                    eius dolores consequatur odio repellendus tempore! Dicta,
+                    perspiciatis rerum quidem dolor corporis explicabo in a
+                    hic reprehenderit. Accusantium repellat deleniti ad
+                    incidunt. Placeat obcaecati porro esse debitis, sequi
+                    minima quod!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white shadow">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto
+            text-gray-900">
+            <span>Sir Syed University, All Right Reserved &copy; 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Signout Modal-->
+  <div class="modal fade" id="signoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Select "Logout" below if you are ready to end your current session.
+        </div>
+
+        <div class="modal-footer mx-5">
+          <a class="btn btn-primary" role="button" href="../pages/signin.html">Sign Out</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../../source/jquery/jquery.min.js"></script>
+  <script src="../../source/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../../source/js/page.js"></script>
+</body>
+
+</html>
